@@ -1,4 +1,3 @@
-[index_Version2.html](https://github.com/user-attachments/files/35064249/index_Version2.html)<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
