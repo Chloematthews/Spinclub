@@ -540,6 +540,53 @@
     }
 
     /* ==========================================================
+       11b. About us
+       ========================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 60px;
+    }
+    .about-story > p { max-width: 560px; font-size: 1.05rem; }
+
+    .about-panel {
+      padding: 30px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow-soft);
+    }
+    .about-panel h3 { margin-bottom: 18px; }
+
+    .about-values {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .about-values li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 18px;
+      border-radius: 17px;
+      background: var(--cream);
+    }
+    .about-values-icon {
+      display: grid;
+      flex: none;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 13px;
+      background: var(--mint);
+      font-size: 1.2rem;
+    }
+    .about-values strong { display: block; color: var(--ink); }
+    .about-values p { margin: 0; font-size: .9rem; }
+
+    /* ==========================================================
        12. FAQ
        ========================================================== */
     .faq-layout { display: grid; grid-template-columns: .75fr 1.25fr; gap: 60px; }
@@ -706,6 +753,7 @@
       /* Stack two-column layouts */
       .hero-grid,
       .fold-card,
+      .about-grid,
       .faq-layout,
       .location-grid,
       .signup-grid { grid-template-columns: 1fr; }
@@ -723,6 +771,7 @@
       .step:not(:last-child)::after { display: none; }
 
       .fold-card { padding: 30px 24px; }
+      .about-grid,
       .faq-layout { gap: 22px; }
       .signup-grid { gap: 15px; }
     }
@@ -768,6 +817,7 @@
         <a href="#services">Services</a>
         <a href="#memberships">Memberships</a>
         <a href="#how-it-works">How it works</a>
+        <a href="#about">About</a>
         <a href="#faq">FAQs</a>
         <a href="#location">Location</a>
         <a class="btn nav-join" href="#join">Join SpinClub <span aria-hidden="true">↗</span></a>
@@ -976,6 +1026,46 @@
       </div>
     </section>
 
+    <!-- ======================= About us ======================= -->
+    <section class="section section--tinted" id="about">
+      <div class="container about-grid">
+        <div class="about-story">
+          <span class="eyebrow">About us</span>
+          <h2>Started by neighbours who were tired of laundry day.</h2>
+          <p>SpinClub began with a simple frustration. Between work, study and family, Mia and Tom kept losing their weekends to coin slots, broken dryers and lugging baskets across town.</p>
+          <p>So they set out to build the laundromat they wished they had: clean, bright and well looked after, with a membership that makes costs easy to plan and staff who know regulars by name.</p>
+          <p>Today SpinClub is still locally owned and run. Whether you pop in for a quick wash or hand the whole load over to us, our aim is the same: to give you a bit of your week back.</p>
+        </div>
+
+        <aside class="about-panel" aria-labelledby="about-values-title">
+          <h3 id="about-values-title">What we care about</h3>
+          <ul class="about-values">
+            <li>
+              <span class="about-values-icon" aria-hidden="true">🫧</span>
+              <div>
+                <strong>Fresh, well-kept machines</strong>
+                <p>Clean washers and dryers you can count on, every visit.</p>
+              </div>
+            </li>
+            <li>
+              <span class="about-values-icon" aria-hidden="true">🤝</span>
+              <div>
+                <strong>Fair, simple pricing</strong>
+                <p>Clear memberships with no guesswork at the end of the month.</p>
+              </div>
+            </li>
+            <li>
+              <span class="about-values-icon" aria-hidden="true">🏡</span>
+              <div>
+                <strong>Proudly local</strong>
+                <p>Run by people who live nearby and know the community.</p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
     <!-- ======================= FAQ ======================= -->
     <section class="section" id="faq">
       <div class="container faq-layout">
@@ -1024,7 +1114,7 @@
           <div class="info-card">
             <h3>Visit us</h3>
             <address>
-              <p><strong>SpinClub — Your Neighborhood</strong><br />Add your street address here<br />Your City, ZIP / Postcode</p>
+              <p><strong>SpinClub Norwood</strong><br />Shop 4, 27 Rosella Street<br />Norwood SA 5067</p>
             </address>
             <a class="text-link" href="mailto:hello@spinclub.example">hello@spinclub.example →</a>
             <div class="map-placeholder">Add your map or directions link here</div>
